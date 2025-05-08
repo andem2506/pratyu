@@ -122,6 +122,9 @@
     <section id="technology" class="py-20 bg-fixed bg-center bg-cover bg-no-repeat px-6" style="background-image: url('earth3.jpg');">
       <div class="bg-white bg-opacity-90 py-16 px-6 rounded-xl max-w-7xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">How LAES Works</h2>
+        <p class="text-center mb-6 px-10">Liquid Air Energy Storage (LAES) ensures 24/7 clean energy by storing excess power from 
+          renewables like wind and solar. Scalable, long-lasting, and eco-friendly, it reduces emissions, stabilizes the grid, and minimizes reliance on fossil fuels. 
+          LAES is a key solution for powering a sustainable planet.</p>
         <div class="grid md:grid-cols-4 gap-10 text-center">
           <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
           <p class="text-xl font-bold mb-2 text-primary">1. Compression</p>
@@ -161,6 +164,62 @@
         </div>
       </div>
     </section>
+<!-- OUR OFFERINGS -->
+<section id="offerings" class="relative py-24 bg-white overflow-hidden bg-[url('earth4.jpg')] bg-fixed bg-top bg-no-repeat bg-cover">
+  <div class="absolute inset-0 "></div> <!-- Optional overlay for readability -->
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 bg-white/80 backdrop-blur-lg p-6 rounded-xl ">
+    <h2 class="text-4xl font-semibold text-center text-primary mb-20">Our Offerings</h2>  
+    <div class="relative space-y-24">
+      <!-- Offerings Items -->
+      <!-- Item 1 -->
+      <div class="flex flex-col md:flex-row items-center md:items-start relative group">
+        <div class="md:w-1/2 md:pr-10 text-right md:text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
+          <h3 class="text-2xl font-bold text-primary mb-2">24/7 Clean Energy on Tap</h3>
+          <p class="text-gray-600 mb-4">
+            Seamless, continuous clean energy for modern infrastructure. Ideal for remote grids, smart cities, and eco-conscious industry.
+          </p>
+          <a href="#contact" class="text-sm font-semibold text-primary hover:underline">Book a Demo →</a>
+        </div>
+        <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-left opacity-0 translate-x-8">
+          <img src="earth1.jpg" alt="Clean Energy" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500">
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center md:items-start relative group">
+        <div class="md:w-1/2 md:pl-10 text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
+          <h3 class="text-2xl font-bold text-primary mb-2">Blueprint to Reality</h3>
+          <p class="text-gray-600 mb-4">
+            From design consultation to implementation—we engineer your future-proof LAES system tailored to your energy needs.
+          </p>
+          <a href="#contact" class="text-sm font-semibold text-primary hover:underline">Request Proposal →</a>
+        </div>
+        <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-right opacity-0 -translate-x-8">
+          <img src="earth2.jpg" alt="Blueprint" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500">
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex flex-col md:flex-row items-center md:items-start relative group">
+        <div class="md:w-1/2 md:pr-10 text-right md:text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
+          <h3 class="text-2xl font-bold text-primary mb-2">Your Vision, Engineered</h3>
+          <p class="text-gray-600 mb-4">
+            Co-design and deploy custom scalable storage architecture for any scale—from startups to nation-scale grids.
+          </p>
+          <a href="#contact" class="text-sm font-semibold text-primary hover:underline">Start Building →</a>
+        </div>
+        <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-left opacity-0 translate-x-8">
+          <img src="earth3.jpg" alt="Custom Build" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
 
     <!-- CONTACT -->
     <section id="contact" class="bg-gray-100 py-20 px-6">
@@ -213,7 +272,21 @@
       closeIcon.classList.add('hidden');
     }
   });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-x-8', '-translate-x-8');
+        entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right')
+    .forEach(el => observer.observe(el));
+
     </script>
       </div>
   </body>
 </html>
+
