@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" type="image/svg+xml" href="33.svg" media="(prefers-color-scheme: light)">
-<link rel="icon" type="image/svg+xml" href="11.png" media="(prefers-color-scheme: dark)">
-<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pratyu Energy | Liquid Air Energy Storage</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
+ <head>
+  <meta content="Pratyu Energy pioneers Liquid Air Energy Storage (LAES) in India, offering scalable, clean, and sustainable energy storage solutions for a greener future." name="description"/>
+  <link href="https://www.pratyuenergy.com/" rel="canonical"/>
+  <meta content="Pratyu Energy | Liquid Air Energy Storage" property="og:title"/>
+  <meta content="Discover how Pratyu Energy is redefining energy reliability in India through LAES&mdash;scalable, long-duration, and sustainable energy storage." property="og:description"/>
+  <meta content="https://www.pratyuenergy.com/og-image.jpg" property="og:image"/>
+  <meta content="https://www.pratyuenergy.com/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+ </head>
+ <link href="33.svg" media="(prefers-color-scheme: light)" rel="icon" type="image/svg+xml"/>
+ <link href="11.png" media="(prefers-color-scheme: dark)" rel="icon" type="image/svg+xml"/>
+ <meta charset="utf-8"/>
+ <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ <title>
+  Pratyu Energy | Liquid Air Energy Storage
+ </title>
+ <script src="https://cdn.tailwindcss.com">
+ </script>
+ <script>
+  tailwind.config = {
         theme: {
           extend: {
             colors: {
@@ -16,232 +29,462 @@
           },
         },
       };
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
+ </script>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+ <style>
+  html{
+        scroll-behavior: smooth;
+      }
       body {
         font-family: 'Inter', sans-serif;
       }
-    </style>
-  </head>
-  <body class="bg-white text-gray-800 scroll-smooth">
-    <!-- NAVBAR -->
-    <nav class="bg-white/80 backdrop-blur-lg shadow-md fixed w-full z-30 top-0 left-0 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16">
-            <div class="flex items-center space-x-3">
-              <img src="33.svg" alt="Pratyu Energy Logo" class="w-10 h-10" />
-              <span class="text-primary font-extrabold text-xl tracking-wide">Pratyu Energy</span>
-            </div>
-  
-            <!-- Desktop menu -->
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-              <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-200">Services</a>
-              <a href="#concept" class="text-gray-700 hover:text-primary transition-colors duration-200">Concept Study</a>
-              <a href="#careers" class="text-gray-700 hover:text-primary transition-colors duration-200">Careers</a>
-            </div>
-  
-            <!-- Mobile hamburger -->
-            <div class="md:hidden">
-              <button id="menu-toggle" class="text-gray-700 hover:text-primary focus:outline-none">
-                <!-- Hamburger icon -->
-                <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <!-- Close icon -->
-                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-  
-          <!-- Mobile menu -->
-<!-- MOBILE MENU (Hug content + transparent + hover opaque) -->
-<div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-2 py-4 px-3 bg-white/30 backdrop-blur-md border border-gray-200 text-sm font-medium shadow-md z-20 w-fit absolute top-16 right-4 rounded-md">
-    <a href="#services" class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800">Services</a>
-    <a href="#concept" class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800">Concept Study</a>
-    <a href="#careers" class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800">Careers</a>
-  </div>
-            </div>
-      </nav>
-
-      <div class="pt-0">
-
-    <!-- HERO -->
-    <header class="relative h-screen overflow-hidden">
-      <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-        <source src="bgvid.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="absolute inset-0 bg-primary bg-opacity-70 z-10"></div>
-      <div class="relative z-20 flex flex-col justify-center items-center h-full text-center text-white px-6">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up">
-          Powering the Future with Air
-        </h1>
-        <p class="text-lg md:text-xl text-white mb-8 animate-fade-in-up delay-200">
-          Reliable. Scalable. Sustainable Energy Storage
-        </p>
-        <div class="flex space-x-4 animate-fade-in-up delay-300">
-          <a href="#technology" class="px-6 py-3 bg-white text-primary font-semibold rounded-full hover:bg-gray-200 transition-all">
-            Learn More
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-6 text-primary">About Pratyu Energy</h2>
-      <p class="text-lg text-center max-w-3xl mx-auto mb-4">
-        Pratyu Energy is pioneering Liquid Air Energy Storage (LAES) in India, delivering scalable, long-duration, and environmentally sustainable energy storage solutions. We're here to redefine energy reliability for a greener future.
+ </style>
+ <body class="bg-white text-gray-800 scroll-smooth">
+  <!-- NAVBAR -->
+  <nav class="bg-white/80 backdrop-blur-lg shadow-md fixed w-full z-30 top-0 left-0 border-b border-gray-100">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+     <a class="flex items-center space-x-3" href="#home">
+      <img alt="Pratyu Energy Logo" class="w-10 h-10" src="33.svg"/>
+      <span class="text-primary font-extrabold text-xl tracking-wide">
+       Pratyu Energy
+      </span>
+     </a>
+     <!-- Desktop menu -->
+     <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <a class="text-gray-700 hover:text-primary transition-colors duration-200" href="#about">
+       About
+      </a>
+      <a class="text-gray-700 hover:text-primary transition-colors duration-200" href="#offerings">
+       Services
+      </a>
+      <a class="text-gray-700 hover:text-primary transition-colors duration-200" href="#careers">
+       Careers
+      </a>
+      <a class="text-gray-700 hover:text-primary transition-colors duration-200" href="#news">
+       News
+      </a>
+     </div>
+     <!-- Mobile hamburger -->
+     <div class="md:hidden">
+      <button class="text-gray-700 hover:text-primary focus:outline-none" id="menu-toggle">
+       <!-- Hamburger icon -->
+       <svg class="h-6 w-6 block" fill="none" id="hamburger-icon" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+       <!-- Close icon -->
+       <svg class="h-6 w-6 hidden" fill="none" id="close-icon" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+     </div>
+    </div>
+    <!-- Mobile menu -->
+    <!-- MOBILE MENU (Hug content + transparent + hover opaque) -->
+    <div class="md:hidden hidden flex flex-col space-y-2 py-4 px-3 bg-white/30 backdrop-blur-md border border-gray-200 text-sm font-medium shadow-md z-20 w-fit absolute top-16 right-4 rounded-md" id="mobile-menu">
+     <a class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800" href="About">
+      About
+     </a>
+     <a class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800" href="#offerings">
+      Services
+     </a>
+     <a class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800" href="#careers">
+      Careers
+     </a>
+     <a class="px-4 py-2 rounded-md transition duration-200 hover:bg-white hover:bg-opacity-90 text-gray-800" href="#news">
+      News
+     </a>
+    </div>
+   </div>
+  </nav>
+  <div class="pt-0">
+   <!-- HERO -->
+   <header class="relative h-screen overflow-hidden" id="home">
+    <video autoplay="" class="absolute top-0 left-0 w-full h-full object-cover z-0" loop="" muted="" playsinline="">
+     <source src="bgvid.mp4" type="video/mp4"/>
+     Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-primary bg-opacity-70 z-10">
+    </div>
+    <div class="relative z-20 flex flex-col justify-center items-center h-full text-center text-white px-6">
+     <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in-up pt-10">
+      Powering the Future with Air
+     </h1>
+     <p class="text-lg md:text-xl text-white mb-8 animate-fade-in-up delay-200">
+      Reliable. Scalable. Sustainable Energy Storage
+     </p>
+     <div class="flex space-x-4 animate-fade-in-up delay-200">
+      <a class="px-4 py-1 bg-white text-primary font-regular rounded-full hover:bg-gray-300 transition-all" href="#technology">
+       Learn More
+      </a>
+     </div>
+    </div>
+   </header>
+   <!-- ABOUT -->
+   <section class="py-20 px-6 max-w-7xl mx-auto" id="about">
+    <h2 class="text-3xl md:text-4xl font-semibold text-center mb-6 text-primary">
+     About Pratyu Energy
+    </h2>
+    <p class="text-lg text-center max-w-3xl mx-auto mb-4">
+     Pratyu Energy is pioneering Liquid Air Energy Storage (LAES) in India, delivering scalable, long-duration, and environmentally sustainable energy storage solutions. We're here to redefine energy reliability for a greener future.
+    </p>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10 mt-10">
+     <img alt="Clean Energy" class="w-full md:w-1/2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" src="earth1.jpg"/>
+     <div class="text-lg md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-2 text-primary">
+       Clean, renewable energy, around the clock!
+      </h3>
+      <p>
+       Imagine a world powered entirely by clean, renewable energy, available around the clock.
+       <strong>
+        Grid-scale Liquid Air Energy Storage (LAES)
+       </strong>
+       makes this vision a reality by capturing and storing excess energy and releasing it when it matters most.
       </p>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-10 mt-10">
-        <img src="earth1.jpg" alt="Clean Energy" class="w-full md:w-1/2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" />
-        <div class="text-lg md:w-1/2">
-          <h3 class="text-2xl font-semibold mb-2 text-primary">Clean, renewable energy, around the clock!</h3>
-          <p>
-            Imagine a world powered entirely by clean, renewable energy, available around the clock.
-            <strong>Grid-scale Liquid Air Energy Storage (LAES)</strong> makes this vision a reality by capturing and storing excess energy and releasing it when it matters most.
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-10 mt-10">
-        <div class="text-lg md:w-1/2">
-          <h3 class="text-2xl font-semibold mb-2 text-primary">Zero carbon emission</h3>
-          <p>
-            LAES has a long lifespan, uses abundant materials, and <strong>emits zero carbon.</strong> 
-            It's scalable for <strong>diverse energy needs</strong>, bridging gaps when solar and wind fall short.
-          </p>
-        </div>
-        <img src="earth2.jpg" alt="Clean Energy" class="w-full md:w-1/2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" /> 
-      </div>
-    </section>
-
-    <!-- TECHNOLOGY -->
-    <section id="technology" class="py-20 bg-fixed bg-center bg-cover bg-no-repeat px-6" style="background-image: url('earth3.jpg');">
-      <div class="bg-white bg-opacity-90 py-16 px-6 rounded-xl max-w-7xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">How LAES Works</h2>
-        <p class="text-center mb-6 px-10">Liquid Air Energy Storage (LAES) ensures 24/7 clean energy by storing excess power from 
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10 mt-10">
+     <div class="text-lg md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-2 text-primary">
+       Zero carbon emission
+      </h3>
+      <p>
+       LAES has a long lifespan, uses abundant materials, and
+       <strong>
+        emits zero carbon.
+       </strong>
+       It's scalable for
+       <strong>
+        diverse energy needs
+       </strong>
+       , bridging gaps when solar and wind fall short.
+      </p>
+     </div>
+     <img alt="Clean Energy" class="w-full md:w-1/2 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300" src="earth2.jpg"/>
+    </div>
+   </section>
+   <!-- TECHNOLOGY -->
+   <section class="py-20 bg-fixed bg-center bg-cover bg-no-repeat px-6" id="technology" style="background-image: url('earth3.jpg');">
+    <div class="bg-white bg-opacity-90 py-16 px-6 rounded-xl max-w-7xl mx-auto">
+     <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">
+      How LAES Works
+     </h2>
+     <p class="text-center mb-6 px-10">
+      Liquid Air Energy Storage (LAES) ensures 24/7 clean energy by storing excess power from 
           renewables like wind and solar. Scalable, long-lasting, and eco-friendly, it reduces emissions, stabilizes the grid, and minimizes reliance on fossil fuels. 
-          LAES is a key solution for powering a sustainable planet.</p>
-        <div class="grid md:grid-cols-4 gap-10 text-center">
-          <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-          <p class="text-xl font-bold mb-2 text-primary">1. Compression</p>
-<img src="compress.svg" alt="compress icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" style="filter: brightness(0%)" /><p>Ambient air is compressed in stages and cooled.</p>
-          </div>
-          <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-            <p class="text-xl font-bold mb-2 text-primary">2. Liquefaction</p>
-<img src="drop.svg" alt="liquefaction icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" style="filter: brightness(0%)" /><p>Air is liquefied at -196°C and stored cryogenically.</p>
-          </div>
-          <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-            <p class="text-xl font-bold mb-2 text-primary">3. Storage</p>
-<img src="storage.svg" alt="storage icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" style="filter: brightness(0%)" /><p>Stored in insulated tanks until needed.</p>
-          </div>
-          <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-            <p class="text-xl font-bold mb-2 text-primary">4. Regasification</p>
-<img src="replay.svg" alt="regasification icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" style="filter: brightness(0%)" /><p>Expanded through turbines to generate power.</p>
-          </div>
-        </div>
+          LAES is a key solution for powering a sustainable planet.
+     </p>
+     <div class="grid md:grid-cols-4 gap-10 text-center">
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+       <p class="text-xl font-bold mb-2 text-primary">
+        1. Compression
+       </p>
+       <img alt="compress icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" src="compress.svg" style="filter: brightness(0%)"/>
+       <p>
+        Ambient air is compressed in stages and cooled.
+       </p>
       </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-10 text-primary">Why Choose LAES?</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-100 text-center p-6 rounded-xl hover:shadow-2xl transition duration-300">
-          <h3 class="text-xl font-bold mb-2 text-primary">Environmentally Friendly</h3>
-          <p>Uses ambient air with no hazardous materials.</p>
-        </div>
-        <div class="bg-gray-100 text-center p-6 rounded-xl hover:shadow-2xl transition duration-300">
-          <h3 class="text-xl font-bold mb-2 text-primary">Long Lifespan</h3>
-          <p>Operates efficiently for 40-50 years.</p>
-        </div>
-        <div class="bg-gray-100 text-center p-6 rounded-xl hover:shadow-2xl transition duration-300">
-          <h3 class="text-xl font-bold mb-2 text-primary">Grid Resilience</h3>
-          <p>Supports renewable energy integration and peak management.</p>
-        </div>
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+       <p class="text-xl font-bold mb-2 text-primary">
+        2. Liquefaction
+       </p>
+       <img alt="liquefaction icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" src="drop.svg" style="filter: brightness(0%)"/>
+       <p>
+        Air is liquefied at -196&deg;C and stored cryogenically.
+       </p>
       </div>
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+       <p class="text-xl font-bold mb-2 text-primary">
+        3. Storage
+       </p>
+       <img alt="storage icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" src="storage.svg" style="filter: brightness(0%)"/>
+       <p>
+        Stored in insulated tanks until needed.
+       </p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+       <p class="text-xl font-bold mb-2 text-primary">
+        4. Regasification
+       </p>
+       <img alt="regasification icon" class="w-12 h-12 md:w-16 md:h-16 mx-auto my-4" src="replay.svg" style="filter: brightness(0%)"/>
+       <p>
+        Expanded through turbines to generate power.
+       </p>
+      </div>
+     </div>
+     <div class="mt-12 text-center">
+      <img alt="LAES flow chart" class="mx-auto w-full max-w-4xl rounded-lg shadow-lg" src="LAESflow.gif"/>
+     </div>
+    </div>
+   </section>
+   <!-- BENEFITS -->
+   <section class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-semibold text-center mb-10 text-primary">
+     Why Choose LAES?
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+     <div class="bg-gray-100 text-center p-6 rounded-xl hover:shadow-2xl transition duration-300">
+      <h3 class="text-xl font-bold mb-2 text-primary">
+       Environmentally Friendly
+      </h3>
+      <p>
+       Uses ambient air with no hazardous materials.
+      </p>
+     </div>
+     <div class="bg-gray-100 text-center p-6 rounded-xl hover:shadow-2xl transition duration-300">
+      <h3 class="text-xl font-bold mb-2 text-primary">
+       Long Lifespan
+      </h3>
+      <p>
+       Operates efficiently for 40-50 years.
+      </p>
+     </div>
+     <div class="bg-gray-100 text-center p-6 rounded-xl hover:shadow-2xl transition duration-300">
+      <h3 class="text-xl font-bold mb-2 text-primary">
+       Grid Resilience
+      </h3>
+      <p>
+       Supports renewable energy integration and peak management.
+      </p>
+     </div>
+    </div>
+    <section class="py-20 px-6 max-w-7xl mx-auto" id="benefits">
+     <div class="flex flex-col md:flex-row items-start gap-10">
+      <!-- Accordion Column -->
+      <div class="w-full md:w-1/2 space-y-4">
+       <!-- Accordion Items -->
+       <details class="group border border-gray-200 p-4 rounded-xl bg-gray-50">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-primary">
+         No Geographical Constraints
+         <svg class="h-5 w-5 text-primary transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+         </svg>
+        </summary>
+        <p class="mt-2 text-gray-700">
+         LAES is not limited by terrain or geology like pumped hydro or CAES, allowing flexible siting.
+        </p>
+       </details>
+       <details class="group border border-gray-200 p-4 rounded-xl bg-gray-50">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-primary">
+         Long Lifespan and Scalable
+         <svg class="h-5 w-5 text-primary transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+         </svg>
+        </summary>
+        <p class="mt-2 text-gray-700">
+         With a 30-year lifespan and modular design, LAES is fit for both local and grid-scale needs.
+        </p>
+       </details>
+       <details class="group border border-gray-200 p-4 rounded-xl bg-gray-50">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-primary">
+         Integration with Waste Heat Recovery
+         <svg class="h-5 w-5 text-primary transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+         </svg>
+        </summary>
+        <p class="mt-2 text-gray-700">
+         LAES systems boost efficiency by recovering industrial waste heat or cold energy streams.
+        </p>
+       </details>
+       <details class="group border border-gray-200 p-4 rounded-xl bg-gray-50">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-primary">
+         Environmentally Friendly and Safe
+         <svg class="h-5 w-5 text-primary transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+         </svg>
+        </summary>
+        <p class="mt-2 text-gray-700">
+         Uses air as the working fluid with zero emissions and no toxic chemicals.
+        </p>
+       </details>
+       <details class="group border border-gray-200 p-4 rounded-xl bg-gray-50">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-primary">
+         Enhances Grid Resilience
+         <svg class="h-5 w-5 text-primary transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round">
+          </path>
+         </svg>
+        </summary>
+        <p class="mt-2 text-gray-700">
+         Supports peak load demands and stabilizes renewable-heavy grids with rapid response.
+        </p>
+       </details>
+      </div>
+      <!-- Image Column -->
+      <div class="w-full md:w-1/2 overflow-hidden items-center justify-center">
+       <img alt="LAES System Benefits" class="w-full h-auto object-contain" src="benifits.png" style="height: 350px;">
+       </img>
+      </div>
+     </div>
     </section>
-<!-- OUR OFFERINGS -->
-<section id="offerings" class="relative py-24 bg-white overflow-hidden bg-[url('earth4.jpg')] bg-fixed bg-top bg-no-repeat bg-cover">
-  <div class="absolute inset-0 "></div> <!-- Optional overlay for readability -->
-
-  <div class="relative z-10 max-w-5xl mx-auto px-6 bg-white/80 backdrop-blur-lg p-6 rounded-xl ">
-    <h2 class="text-4xl font-semibold text-center text-primary mb-20">Our Offerings</h2>  
-    <div class="relative space-y-24">
+   </section>
+   <!-- OUR OFFERINGS -->
+   <section class="relative py-24 bg-white overflow-hidden bg-[url('earth4.jpg')] bg-fixed bg-top bg-no-repeat bg-cover" id="offerings">
+    <div class="absolute inset-0">
+    </div>
+    <!-- Optional overlay for readability -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 bg-white/80 backdrop-blur-lg p-6 rounded-xl">
+     <h2 class="text-4xl font-semibold text-center text-primary mb-20">
+      Our Offerings
+     </h2>
+     <div class="relative space-y-24">
       <!-- Offerings Items -->
       <!-- Item 1 -->
       <div class="flex flex-col md:flex-row items-center md:items-start relative group">
-        <div class="md:w-1/2 md:pr-10 text-right md:text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
-          <h3 class="text-2xl font-bold text-primary mb-2">24/7 Clean Energy on Tap</h3>
-          <p class="text-gray-600 mb-4">
-            Seamless, continuous clean energy for modern infrastructure. Ideal for remote grids, smart cities, and eco-conscious industry.
-          </p>
-          <a href="#contact" class="text-sm font-semibold text-primary hover:underline">Book a Demo →</a>
-        </div>
-        <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-left opacity-0 translate-x-8">
-          <img src="earth1.jpg" alt="Clean Energy" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500">
-        </div>
+       <div class="md:w-1/2 md:pr-10 text-right md:text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
+        <h3 class="text-2xl font-bold text-primary mb-2">
+         24/7 Clean Energy on Tap
+        </h3>
+        <p class="text-gray-600 mb-4">
+         Seamless, continuous clean energy for modern infrastructure. Ideal for remote grids, smart cities, and eco-conscious industry.
+        </p>
+        <a class="text-sm font-semibold text-primary hover:underline" href="#contact">
+         Book a Demo &rarr;
+        </a>
+       </div>
+       <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-left opacity-0 translate-x-8">
+        <img alt="Clean Energy" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500" src="earth1.jpg"/>
+       </div>
       </div>
-
       <!-- Item 2 -->
       <div class="flex flex-col md:flex-row-reverse items-center md:items-start relative group">
-        <div class="md:w-1/2 md:pl-10 text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
-          <h3 class="text-2xl font-bold text-primary mb-2">Blueprint to Reality</h3>
-          <p class="text-gray-600 mb-4">
-            From design consultation to implementation—we engineer your future-proof LAES system tailored to your energy needs.
-          </p>
-          <a href="#contact" class="text-sm font-semibold text-primary hover:underline">Request Proposal →</a>
-        </div>
-        <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-right opacity-0 -translate-x-8">
-          <img src="earth2.jpg" alt="Blueprint" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500">
-        </div>
+       <div class="md:w-1/2 md:pl-10 text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
+        <h3 class="text-2xl font-bold text-primary mb-2">
+         Blueprint to Reality
+        </h3>
+        <p class="text-gray-600 mb-4">
+         From design consultation to implementation&mdash;we engineer your future-proof LAES system tailored to your energy needs.
+        </p>
+        <a class="text-sm font-semibold text-primary hover:underline" href="#contact">
+         Request Proposal &rarr;
+        </a>
+       </div>
+       <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-right opacity-0 -translate-x-8">
+        <img alt="Blueprint" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500" src="earth2.jpg"/>
+       </div>
       </div>
-
-      <!-- Item 3 -->
-      <div class="flex flex-col md:flex-row items-center md:items-start relative group">
-        <div class="md:w-1/2 md:pr-10 text-right md:text-left md:order-1 animate-fade-in-up opacity-0 translate-y-8">
-          <h3 class="text-2xl font-bold text-primary mb-2">Your Vision, Engineered</h3>
-          <p class="text-gray-600 mb-4">
-            Co-design and deploy custom scalable storage architecture for any scale—from startups to nation-scale grids.
-          </p>
-          <a href="#contact" class="text-sm font-semibold text-primary hover:underline">Start Building →</a>
-        </div>
-        <div class="md:w-1/2 md:order-2 mt-6 md:mt-0 animate-slide-in-left opacity-0 translate-x-8">
-          <img src="earth3.jpg" alt="Custom Build" class="w-full rounded-2xl shadow-lg hover:scale-105 transition duration-500">
-        </div>
-      </div>
-
+     </div>
     </div>
+   </section>
   </div>
-</section>
-
-  </div>
-</section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="bg-gray-100 py-20 px-6">
-      <div class="max-w-2xl mx-auto">
-        <h2 class="text-3xl font-semibold text-center mb-6 text-primary">Get in Touch</h2>
-        <form class="space-y-6">
-          <input type="text" placeholder="Your Name" class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
-          <input type="email" placeholder="Your Email" class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" />
-          <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-          <button type="submit" class="w-full py-3 bg-primary text-white rounded-md hover:bg-blue-700 transition-all">Send Message</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-primary py-6 text-center text-white text-sm">
-      &copy; 2025 Pratyu Energy Pvt. Ltd. All rights reserved.
-    </footer>
-
-    <!-- Animations -->
-    <script>
-      document.querySelectorAll('.animate-fade-in-up').forEach((el, i) => {
+  <!-- CAREERS -->
+  <section class="py-20 px-6 bg-gradient-to-r from-gray-100 via-gray-200 to-white shadow-lg rounded-xl" id="careers">
+   <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-6">
+     Join Our Team
+    </h2>
+    <p class="text-lg max-w-3xl mx-auto mb-6">
+     At Pratyu Energy, we're always looking for passionate and talented individuals who want to make a difference in the world of sustainable energy. 
+      If you're ready to contribute your skills to our mission, we'd love to hear from you.
+    </p>
+    <p class="text-lg max-w-3xl mx-auto mb-8">
+     We're hiring for various roles across different departments. If you're driven by innovation and excited about the future of clean energy, send us your resume today!
+    </p>
+    <a class="px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-blue-700 transition-all" href="">
+     Email:
+    </a>
+   </div>
+  </section>
+  <!-- NEWS SECTION -->
+  <section class="py-20 px-6 bg-cover bg-center relative" id="news" style="background-image: url('earth6.jpg');">
+   <div class="absolute inset-0 bg-black opacity-40">
+   </div>
+   <!-- Overlay for text contrast -->
+   <div class="relative z-10 max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
+     Latest News on LAES Technology
+    </h2>
+    <p class="text-lg mb-12 text-white">
+     Stay up to date with the latest developments in Liquid Air Energy Storage technology and how it&rsquo;s shaping the future of clean energy.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+     <!-- Card 1 -->
+     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+      <img alt="News 1" class="w-full h-48 object-cover rounded-lg mb-4" src="news1.jpeg"/>
+      <h3 class="text-xl font-semibold text-primary mb-2">
+       Using liquid air for grid-scale energy storage
+      </h3>
+      <h5 class="text-md font-semibold mb-2">
+       Nancy W. Stauffer, MIT Energy Initiative
+       <br/>
+       April 10, 2025
+      </h5>
+      <p class="text-gray-600 mb-4">
+       New research finds liquid air energy storage could be the lowest-cost option for ensuring a continuous power supply on a future grid dominated by carbon-free but intermittent sources of electricity.
+      </p>
+      <a class="text-primary font-semibold hover:underline" href="https://news.mit.edu/2025/using-liquid-air-grid-scale-energy-storage-0410" target="_blank">
+       Read more
+      </a>
+     </div>
+     <!-- Card 2 -->
+     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+      <img alt="News 2" class="w-full h-48 object-cover rounded-lg mb-4" src="news2.jpg"/>
+      <h3 class="text-xl font-semibold text-primary mb-2">
+       Another Headache For Fossil Fuels: Liquid Air Energy Storage
+      </h3>
+      <h5 class="text-md font-semibold mb-2">
+       Tina Casey, CleanTechnica
+       <br/>
+       April 17, 2025
+      </h5>
+      <p class="text-gray-600 mb-4">
+       The long duration angle is a critical piece of the renewable energy transition puzzle. Today&rsquo;s Li-ion batteries last around four hours, enough to fulfill daily grid balancing tasks.
+      </p>
+      <a class="text-primary font-semibold hover:underline" href="https://cleantechnica.com/2025/04/14/another-headache-for-fossil-fuels-liquid-air-energy-storage/" target="_blank">
+       Read more
+      </a>
+     </div>
+     <!-- Card 3 -->
+     <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+      <img alt="News 3" class="w-full h-48 object-cover rounded-lg mb-4" src="news3.webp"/>
+      <h3 class="text-xl font-semibold text-primary mb-2">
+       World's first commercial liquid-air energy storage plant
+      </h3>
+      <h5 class="text-md font-semibold mb-2">
+       Andrew Lee, Recharge News
+       <br/>
+       November 06, 2020
+      </h5>
+      <p class="text-gray-600 mb-4">
+       A joint venture between UK-based Highview Power and independent solar/natural-gas plant developer Carlton Power will build and operate the 50MW/250MWh &ldquo;CRYObattery&rdquo;
+      </p>
+      <a class="text-primary font-semibold hover:underline" href="https://www.rechargenews.com/transition/work-starts-to-build-worlds-first-commercial-liquid-air-energy-storage-plant/2-1-908259" target="_blank">
+       Read more
+      </a>
+     </div>
+     <!-- Additional Cards can be added similarly -->
+    </div>
+   </div>
+  </section>
+  <!-- CONTACT -->
+  <section class="bg-gray-100 py-20 px-6" id="contact">
+   <div class="max-w-2xl mx-auto">
+    <h2 class="text-3xl font-semibold text-center mb-6 text-primary">
+     Get in Touch
+    </h2>
+    <form action="https://formspree.io/f/mdkgdond" class="space-y-6" enctype="multipart/form-data" method="POST">
+     <input class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" name="name" placeholder="Your Name" type="text"/>
+     <input class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" name="email" placeholder="Your Email" type="email"/>
+     <textarea class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" name="message" placeholder="Your Message" rows="5"></textarea>
+     <button class="w-full py-3 bg-primary text-white rounded-md hover:bg-blue-700 transition-all" type="submit">
+      Send Message
+     </button>
+    </form>
+   </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="bg-primary py-6 text-center text-white text-sm">
+   &copy; 2025 Pratyu Energy Pvt. Ltd. All rights reserved.
+  </footer>
+  <!-- Animations -->
+  <script>
+   document.querySelectorAll('.animate-fade-in-up').forEach((el, i) => {
         el.style.opacity = 0;
         el.style.transform = 'translateY(20px)';
         setTimeout(() => {
@@ -284,9 +527,6 @@
 
   document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right')
     .forEach(el => observer.observe(el));
-
-    </script>
-      </div>
-  </body>
+  </script>
+ </body>
 </html>
-
