@@ -466,164 +466,174 @@
   </section>
 <!-- CONTACT -->
 <section class="bg-gray-100 py-20 px-6" id="contact">
-   <div class="max-w-2xl mx-auto">
-    <h2 class="text-3xl font-semibold text-center mb-6 text-primary">
-     Get in Touch
-    </h2>
-  <form id="contact-form" class="space-y-6">
-  <div>
-    <label for="name" class="sr-only">Name</label>
-    <input
-      id="name"
-      name="name"
-      type="text"
-      placeholder="Your Name"
-      class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-      required
-    />
-  </div>
+  <div class="max-w-2xl mx-auto">
+   <h2 class="text-3xl font-semibold text-center mb-6 text-primary">
+    Get in Touch
+   </h2>
+ <form id="contact-form" class="space-y-6">
+ <div>
+   <label for="name" class="sr-only">Name</label>
+   <input
+     id="name"
+     name="name"
+     type="text"
+     placeholder="Your Name"
+     class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+     required
+   />
+ </div>
 
-  <div>
-    <label for="email" class="sr-only">Email</label>
-    <input
-      id="email"
-      name="email"
-      type="email"
-      placeholder="Your Email"
-      class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-      required
-    />
-  </div>
+ <div>
+   <label for="email" class="sr-only">Email</label>
+   <input
+     id="email"
+     name="email"
+     type="email"
+     placeholder="Your Email"
+     class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+     required
+   />
+ </div>
 
-  <div>
-    <label for="message" class="sr-only">Message</label>
-    <textarea
-      id="message"
-      name="message"
-      rows="5"
-      placeholder="Your Message"
-      class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-      required
-    ></textarea>
-  </div>
+ <div>
+   <label for="message" class="sr-only">Message</label>
+   <textarea
+     id="message"
+     name="message"
+     rows="5"
+     placeholder="Your Message"
+     class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+     required
+   ></textarea>
+ </div>
 
-  <button
-    type="submit"
-    class="w-full py-3 bg-primary text-white rounded-md hover:bg-blue-700 transition-all"
-  >
-    Send Message
-  </button>
+ <button
+   type="submit"
+   class="w-full py-3 bg-primary text-white rounded-md hover:bg-blue-700 transition-all"
+ >
+   Send Message
+ </button>
 </form>
 
 <!-- Success Popup (hidden initially) -->
 <div id="success-popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-  <div class="bg-white p-6 rounded-md shadow-lg">
-    <h3 id="popup-title" class="text-lg font-semibold text-green-500">Sending...</h3>
-    <p id="popup-message">Please wait while we send your message.</p>
-    <button id="close-popup" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
-  </div>
+ <div class="bg-white p-6 rounded-md shadow-lg w-80 text-center">
+  <div id="popup-icon" class="mb-4 flex justify-center items-center">
+    <!-- Green Tick SVG -->
+     <svg id="green-tick" class="w-12 h-12 text-green-500 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+     </svg>
+   </div>
+   <h3 id="popup-title" class="text-lg font-semibold text-green-500">Sending...</h3>
+   <p id="popup-message">Please wait while we send your message.</p>
+   <button id="close-popup" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
+ </div>
 </div>
 
-   </div>
+  </div>
 </section>
 <!-- FOOTER -->
 <footer class="bg-primary py-6 text-center text-white text-sm">
-   &copy; 2025 Pratyu Energy Pvt. Ltd. All rights reserved.
+  &copy; 2025 Pratyu Energy Pvt. Ltd. All rights reserved.
 </footer>
 
 <!-- Animations -->
 <script>
-  document.querySelectorAll('.animate-fade-in-up').forEach((el, i) => {
-    el.style.opacity = 0;
-    el.style.transform = 'translateY(20px)';
-    setTimeout(() => {
-      el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-    }, 300 + i * 100);
-  });
+ document.querySelectorAll('.animate-fade-in-up').forEach((el, i) => {
+   el.style.opacity = 0;
+   el.style.transform = 'translateY(20px)';
+   setTimeout(() => {
+     el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+     el.style.opacity = 1;
+     el.style.transform = 'translateY(0)';
+   }, 300 + i * 100);
+ });
 
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hamburgerIcon = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
+ const toggleBtn = document.getElementById('menu-toggle');
+ const mobileMenu = document.getElementById('mobile-menu');
+ const hamburgerIcon = document.getElementById('hamburger-icon');
+ const closeIcon = document.getElementById('close-icon');
 
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    hamburgerIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-  });
+ toggleBtn.addEventListener('click', () => {
+   mobileMenu.classList.toggle('hidden');
+   hamburgerIcon.classList.toggle('hidden');
+   closeIcon.classList.toggle('hidden');
+ });
 
-  document.addEventListener('click', function (event) {
-    const isClickInsideMenu = mobileMenu.contains(event.target);
-    const isClickOnToggle = toggleBtn.contains(event.target);
+ document.addEventListener('click', function (event) {
+   const isClickInsideMenu = mobileMenu.contains(event.target);
+   const isClickOnToggle = toggleBtn.contains(event.target);
 
-    if (!isClickInsideMenu && !isClickOnToggle && !mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
-      hamburgerIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
-    }
-  });
+   if (!isClickInsideMenu && !isClickOnToggle && !mobileMenu.classList.contains('hidden')) {
+     mobileMenu.classList.add('hidden');
+     hamburgerIcon.classList.remove('hidden');
+     closeIcon.classList.add('hidden');
+   }
+ });
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-x-8', '-translate-x-8');
-        entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0');
-      }
-    });
-  }, { threshold: 0.2 });
+ const observer = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+     if (entry.isIntersecting) {
+       entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-x-8', '-translate-x-8');
+       entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0');
+     }
+   });
+ }, { threshold: 0.2 });
 
-  document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right')
-    .forEach(el => observer.observe(el));
+ document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right')
+   .forEach(el => observer.observe(el));
 
-  // Form submission handling with Google Apps Script URL
-  const form = document.getElementById('contact-form');
-  const successPopup = document.getElementById('success-popup');
-  const closePopupButton = document.getElementById('close-popup');
-  const popupTitle = document.getElementById('popup-title');
-  const popupMessage = document.getElementById('popup-message');
+ // Form submission handling with Google Apps Script URL
+ const form = document.getElementById('contact-form');
+ const successPopup = document.getElementById('success-popup');
+ const closePopupButton = document.getElementById('close-popup');
+ const popupTitle = document.getElementById('popup-title');
+ const popupMessage = document.getElementById('popup-message');
+ const greenTick = document.getElementById('green-tick');
+ const popupIcon = document.getElementById('popup-icon');
 
-  // The Google Apps Script URL for form submission
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxuDaq3rYUuPf9oZZWwrppirhfidRytHRcZ6AKxkzFQKsyPrWZjTvKPww9SnWy_RCoZ/exec';
+ // The Google Apps Script URL for form submission
+ const scriptUrl = 'https://script.google.com/macros/s/AKfycbxuDaq3rYUuPf9oZZWwrppirhfidRytHRcZ6AKxkzFQKsyPrWZjTvKPww9SnWy_RCoZ/exec';
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent the default form submission
+ form.addEventListener('submit', function (e) {
+   e.preventDefault(); // Prevent the default form submission
 
-    // Show the success popup immediately
-    successPopup.classList.remove('hidden');
-    popupTitle.textContent = 'Sending...';
-    popupMessage.textContent = 'Please wait while we send your message.';
+   // Show the success popup immediately
+   successPopup.classList.remove('hidden');
+   popupTitle.textContent = 'Sending...';
+   popupMessage.textContent = 'Please wait while we send your message.';
+   greenTick.classList.add('hidden'); // Hide green tick initially
+   popupIcon.classList.remove('animate-pulse');
 
-    // Form data
-    const formData = new FormData(form);
+   // Form data
+   const formData = new FormData(form);
 
-    // Use fetch to submit the form data asynchronously
-    fetch(scriptUrl, {
-      method: 'POST',
-      body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Change popup content on success
-      popupTitle.textContent = 'Success!';
-      popupMessage.textContent = 'Your message has been sent successfully.';
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      // Change popup content on error
-      popupTitle.textContent = 'Error!';
-      popupMessage.textContent = 'There was a problem sending your message. Please try again.';
-    });
-  });
+   // Use fetch to submit the form data asynchronously
+   fetch(scriptUrl, {
+     method: 'POST',
+     body: formData,
+   })
+   .then(response => response.json())
+   .then(data => {
+     // Change popup content on success
+     popupTitle.textContent = 'Success!';
+     popupMessage.textContent = 'Your message has been sent successfully.';
+     greenTick.classList.remove('hidden'); // Show green tick
+     greenTick.classList.add('animate-bounce'); // Add animation
+   })
+   .catch(error => {
+     console.error('Error:', error);
+     // Change popup content on error
+     popupTitle.textContent = 'Error!';
+     popupMessage.textContent = 'There was a problem sending your message. Please try again.';
+     greenTick.classList.add('hidden'); // Hide green tick on error
+   });
+ });
 
-  // Close success popup
-  closePopupButton.addEventListener('click', function() {
-    successPopup.classList.add('hidden');
-  });
+ // Close success popup
+ closePopupButton.addEventListener('click', function() {
+   successPopup.classList.add('hidden');
+ });
 </script>
 </body>
 </html>
-
-
-
