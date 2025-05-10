@@ -620,6 +620,9 @@
      popupMessage.textContent = 'Your message has been sent successfully.';
      greenTick.classList.remove('hidden'); // Show green tick
      greenTick.classList.add('animate-bounce'); // Add animation
+
+     form.reset();
+
    })
    .catch(error => {
      console.error('Error:', error);
