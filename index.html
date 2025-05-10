@@ -577,10 +577,13 @@
   document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right')
     .forEach(el => observer.observe(el));
 
-  // Form submission handling with popup
+  // Form submission handling with Google Apps Script URL
   const form = document.getElementById('contact-form');
   const successPopup = document.getElementById('success-popup');
   const closePopupButton = document.getElementById('close-popup');
+
+  // The Google Apps Script URL for form submission
+  const scriptUrl = 'https://script.google.com/macros/s/AKfycbxuDaq3rYUuPf9oZZWwrppirhfidRytHRcZ6AKxkzFQKsyPrWZjTvKPww9SnWy_RCoZ/exec';
 
   form.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission
@@ -589,7 +592,7 @@
     const formData = new FormData(form);
     
     // Use fetch to submit the form data asynchronously
-    fetch(form.action, {
+    fetch(scriptUrl, {
       method: 'POST',
       body: formData,
     })
@@ -611,4 +614,5 @@
 </script>
 </body>
 </html>
+
 
