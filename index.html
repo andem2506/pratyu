@@ -518,8 +518,8 @@
 <!-- Success Popup (hidden initially) -->
 <div id="success-popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
   <div class="bg-white p-6 rounded-md shadow-lg">
-    <h3 class="text-lg font-semibold text-green-500">Success!</h3>
-    <p>Your message has been sent successfully.</p>
+    <h3 id="popup-title" class="text-lg font-semibold text-green-500">Sending...</h3>
+    <p id="popup-message">Please wait while we send your message.</p>
     <button id="close-popup" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
   </div>
 </div>
@@ -581,16 +581,23 @@
   const form = document.getElementById('contact-form');
   const successPopup = document.getElementById('success-popup');
   const closePopupButton = document.getElementById('close-popup');
+  const popupTitle = document.getElementById('popup-title');
+  const popupMessage = document.getElementById('popup-message');
 
   // The Google Apps Script URL for form submission
   const scriptUrl = 'https://script.google.com/macros/s/AKfycbxuDaq3rYUuPf9oZZWwrppirhfidRytHRcZ6AKxkzFQKsyPrWZjTvKPww9SnWy_RCoZ/exec';
 
   form.addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission
-    
+
+    // Show the success popup immediately
+    successPopup.classList.remove('hidden');
+    popupTitle.textContent = 'Sending...';
+    popupMessage.textContent = 'Please wait while we send your message.';
+
     // Form data
     const formData = new FormData(form);
-    
+
     // Use fetch to submit the form data asynchronously
     fetch(scriptUrl, {
       method: 'POST',
@@ -598,12 +605,15 @@
     })
     .then(response => response.json())
     .then(data => {
-      // Show success popup on success
-      successPopup.classList.remove('hidden');
+      // Change popup content on success
+      popupTitle.textContent = 'Success!';
+      popupMessage.textContent = 'Your message has been sent successfully.';
     })
     .catch(error => {
       console.error('Error:', error);
-      // Handle error here (optional)
+      // Change popup content on error
+      popupTitle.textContent = 'Error!';
+      popupMessage.textContent = 'There was a problem sending your message. Please try again.';
     });
   });
 
@@ -614,5 +624,6 @@
 </script>
 </body>
 </html>
+
 
 
