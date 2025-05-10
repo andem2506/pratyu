@@ -464,13 +464,13 @@
     </div>
    </div>
   </section>
-  <!-- CONTACT -->
-  <section class="bg-gray-100 py-20 px-6" id="contact">
+<!-- CONTACT -->
+<section class="bg-gray-100 py-20 px-6" id="contact">
    <div class="max-w-2xl mx-auto">
     <h2 class="text-3xl font-semibold text-center mb-6 text-primary">
      Get in Touch
     </h2>
-  <form action="https://script.google.com/macros/s/AKfycbxuDaq3rYUuPf9oZZWwrppirhfidRytHRcZ6AKxkzFQKsyPrWZjTvKPww9SnWy_RCoZ/exec" class="space-y-6" method="POST">
+  <form id="contact-form" class="space-y-6">
   <div>
     <label for="name" class="sr-only">Name</label>
     <input
@@ -514,36 +514,47 @@
     Send Message
   </button>
 </form>
+
+<!-- Success Popup (hidden initially) -->
+<div id="success-popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white p-6 rounded-md shadow-lg">
+    <h3 class="text-lg font-semibold text-green-500">Success!</h3>
+    <p>Your message has been sent successfully.</p>
+    <button id="close-popup" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
+  </div>
+</div>
+
    </div>
-  </section>
-  <!-- FOOTER -->
-  <footer class="bg-primary py-6 text-center text-white text-sm">
+</section>
+<!-- FOOTER -->
+<footer class="bg-primary py-6 text-center text-white text-sm">
    &copy; 2025 Pratyu Energy Pvt. Ltd. All rights reserved.
-  </footer>
-  <!-- Animations -->
-  <script>
-   document.querySelectorAll('.animate-fade-in-up').forEach((el, i) => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-          el.style.opacity = 1;
-          el.style.transform = 'translateY(0)';
-        }, 300 + i * 100);
-      });
+</footer>
 
-      const toggleBtn = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-        const closeIcon = document.getElementById('close-icon');
+<!-- Animations -->
+<script>
+  document.querySelectorAll('.animate-fade-in-up').forEach((el, i) => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+      el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+      el.style.opacity = 1;
+      el.style.transform = 'translateY(0)';
+    }, 300 + i * 100);
+  });
 
-        toggleBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          hamburgerIcon.classList.toggle('hidden');
-          closeIcon.classList.toggle('hidden');
-        });
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
 
-        document.addEventListener('click', function (event) {
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', function (event) {
     const isClickInsideMenu = mobileMenu.contains(event.target);
     const isClickOnToggle = toggleBtn.contains(event.target);
 
@@ -565,6 +576,39 @@
 
   document.querySelectorAll('.animate-fade-in-up, .animate-slide-in-left, .animate-slide-in-right')
     .forEach(el => observer.observe(el));
-  </script>
- </body>
+
+  // Form submission handling with popup
+  const form = document.getElementById('contact-form');
+  const successPopup = document.getElementById('success-popup');
+  const closePopupButton = document.getElementById('close-popup');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the default form submission
+    
+    // Form data
+    const formData = new FormData(form);
+    
+    // Use fetch to submit the form data asynchronously
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Show success popup on success
+      successPopup.classList.remove('hidden');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Handle error here (optional)
+    });
+  });
+
+  // Close success popup
+  closePopupButton.addEventListener('click', function() {
+    successPopup.classList.add('hidden');
+  });
+</script>
+</body>
 </html>
+
