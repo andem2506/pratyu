@@ -403,57 +403,57 @@
           <h1 class="text-3xl md:text-4xl font-semibold text-primary mb-6">our team</h1>
   
           <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-            A group of industry experts with decades of experience in <span class="font-semibold text-primary">strategy, business development, and engineering</span>. They bring deep technical knowledge, global insight, and visionary leadership to drive innovation and growth.
+              A group of industry experts with decades of experience in <span class="font-semibold text-primary">strategy, business development, and engineering</span>. They bring deep technical knowledge, global insight, and visionary leadership to drive innovation and growth.
           </p>
   
           <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
               <div class="flex flex-col items-center">
                   <img class="object-cover w-1/2 rounded-xl aspect-square" src="rk.jpg" alt="">
-  
                   <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Mr. V. Ramakrishnan</h1>
-  
                   <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Director – Strategy</p>
-             <!-- temp hold  
-               <p class="mt-2 text-white dark:text-gray-300 text-justify">Has decades of experience as an entrepreneur and CEO of 
-                several acclaimed organizations, V Ramakrishnan has international expertise in Strategic Positioning, Mergers, and Acquisitions. 
-                He earned his M. Tech in Industrial Engineering & Operations Research from IIT, Kharagpur and BE in Mechanical Engineering 
-                (Honors) from AC College of Engineering & Technology, Tamilnadu. Being a visiting professor of Osmania University, 
-                he teaches MBA Technology Management program. Currently, he serves as board member for several domestic and international organizations</p> --> 
+                  <button class="mt-4 px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80" onclick="openModal('ramakrishnan-description')">Learn more</button>
               </div>
   
               <div class="flex flex-col items-center">
                   <img class="object-cover w-1/2 rounded-xl aspect-square" src="sp.jpg" alt="">
-  
                   <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Mr. Sambaru Prasad</h1>
-  
                   <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Director – Business Development & Project Management</p>
-              <!-- temp hold
-               <p class="mt-2 text-white dark:text-gray-300 text-justify">With four decades of experience as a serial entrepreneur in Pharmaceuticals, 
-                Infrastructure and Industrial Gases, Sambaru brings expertise in building and operating both greenfield and brownfield projects.  
-                He holds an B. Tech in Chemical Engineering from Osmania University, an M S in Polymer Engineering from University of Toledo, Ohio, USA 
-                and an MBA in International Finance from A B Freeman School of Business, Tulane University, New Orleans, USA.  He serves as a Member 
-                of The Board of Governors, University College of Technology, Osmania University.</p> -->
+                  <button class="mt-4 px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80" onclick="openModal('sambaru-description')">Learn more</button>
               </div>
   
               <div class="flex flex-col items-center">
                   <img class="object-cover w-1/2 rounded-xl aspect-square" src="vbp.jpg" alt="">
-  
                   <h1 class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white">Mr. V B Prakash</h1>
-  
                   <p class="mt-2 text-gray-500 capitalize dark:text-gray-300">Managing Director</p>
-               <!-- temp hold  
-               <p class="mt-2 text-white dark:text-gray-300 text-justify">He is an esteemed professional with an illustrious 
-                  career spanning 28 years in the domains of Commissioning, Process Design & Optimization and Process Safety services
-                  for Oil & Gas, Air Separation Units and Chemical companies. He currently serves has Managing Director of Krest 
-                  Engineering & Technologies. Under his leadership, Krest Engineering & Technologies has excelled in executing projects 
-                  focused on Process Safety & Optimization for a diverse array of global clients. His visionary approach has been pivotal
-                  in delving into technological advancements, particularly in the realms of  Air Separation Units, Hydrogen and Defense, 
-                  contributing significantly to the company's growth and innovative pursuits. He continues to be an influential figure in 
-                  the field, driving advancements and delivering exceptional solutions.</p> -->
+                  <button class="mt-4 px-6 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80" onclick="openModal('prakash-description')">Learn more</button>
               </div>
           </div>
       </div>
   </section>
+  
+  <div id="ramakrishnan-description" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 max-w-lg w-full relative">
+          <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200" onclick="closeModal('ramakrishnan-description')">&times;</button>
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Mr. V. Ramakrishnan</h2>
+          <p class="text-gray-700 dark:text-gray-300 text-justify">Has decades of experience as an entrepreneur and CEO of several acclaimed organizations, V Ramakrishnan has international expertise in Strategic Positioning, Mergers, and Acquisitions. He earned his M. Tech in Industrial Engineering & Operations Research from IIT, Kharagpur and BE in Mechanical Engineering (Honors) from AC College of Engineering & Technology, Tamilnadu. Being a visiting professor of Osmania University, he teaches MBA Technology Management program. Currently, he serves as board member for several domestic and international organizations.</p>
+      </div>
+  </div>
+  
+  <div id="sambaru-description" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 max-w-lg w-full relative">
+          <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200" onclick="closeModal('sambaru-description')">&times;</button>
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Mr. Sambaru Prasad</h2>
+          <p class="text-gray-700 dark:text-gray-300 text-justify">With four decades of experience as a serial entrepreneur in Pharmaceuticals, Infrastructure and Industrial Gases, Sambaru brings expertise in building and operating both greenfield and brownfield projects. He holds an B. Tech in Chemical Engineering from Osmania University, an M S in Polymer Engineering from University of Toledo, Ohio, USA and an MBA in International Finance from A B Freeman School of Business, Tulane University, New Orleans, USA. He serves as a Member of The Board of Governors, University College of Technology, Osmania University.</p>
+      </div>
+  </div>
+  
+  <div id="prakash-description" class="modal hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 max-w-lg w-full relative">
+          <button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200" onclick="closeModal('prakash-description')">&times;</button>
+          <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Mr. V B Prakash</h2>
+          <p class="text-gray-700 dark:text-gray-300 text-justify">He is an esteemed professional with an illustrious career spanning 28 years in the domains of Commissioning, Process Design & Optimization and Process Safety services for Oil & Gas, Air Separation Units and Chemical companies. He currently serves has Managing Director of Krest Engineering & Technologies. Under his leadership, Krest Engineering & Technologies has excelled in executing projects focused on Process Safety & Optimization for a diverse array of global clients. His visionary approach has been pivotal in delving into technological advancements, particularly in the realms of Air Separation Units, Hydrogen and Defense, contributing significantly to the company's growth and innovative pursuits. He continues to be an influential figure in the field, driving advancements and delivering exceptional solutions.</p>
+      </div>
+  </div>
     <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-6">
      Join Our Team
     </h2>
