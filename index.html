@@ -770,11 +770,27 @@
  });
 
  function openModal(modalId) {
-        document.getElementById(modalId).classList.remove('hidden');
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('hidden');
+
+        // Add event listener to close when clicking outside the modal content
+        modal.addEventListener('click', function(event) {
+            // Check if the click occurred directly on the modal background (not inside the content)
+            if (event.target === modal) {
+                closeModal(modalId);
+            }
+        });
     }
 
     function closeModal(modalId) {
-        document.getElementById(modalId).classList.add('hidden');
+        const modal = document.getElementById(modalId);
+        modal.classList.add('hidden');
+        // Remove the event listener to prevent multiple listeners accumulating
+        modal.removeEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal(modalId);
+            }
+        });
     }
 </script>
 </body>
